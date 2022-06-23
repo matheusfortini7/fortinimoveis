@@ -1,2 +1,58 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.search__bar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0;
+  position: relative;
+
+  .search__bar-input {
+    background-color: #FF5964;
+    border: none;
+    border-radius: 29px;
+    padding: 1.1rem;
+    width: 90%;
+  }
+
+  .search__bar-input::placeholder {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .search__bar-icon {
+    position: absolute;
+    right: 51px;
+    color: #fff;
+  }
+}
+
+.buttons {
+  display: flex;
+  padding: 0 0 0 1.5rem;
+
+  .buttons__buy {
+    background-color: #0B5351;
+    border-radius: 20px;
+    height: 14rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .buttons__buy-image {
+    height: 10rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .buttons__buy-title {
+    color: #fff;
+    margin: 0;
+    margin: 0 0 0 1rem;
+  }
+
+}
