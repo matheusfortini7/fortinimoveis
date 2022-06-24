@@ -2,18 +2,21 @@
 @import "home";
 
 .search__bar {
-  align-items: center;
   display: flex;
+  margin: 1rem 1rem;
   justify-content: center;
-  margin: 1.4rem 0;
-  position: relative;
+
+  .form {
+    width: 100vw;
+  }
 
   .search__bar-input {
     background-color: #FF5964;
     border: none;
     border-radius: 29px;
     padding: 1.1rem;
-    width: 90%;
+    width: 100%;
+    position: relative;
   }
 
   .search__bar-input::placeholder {
@@ -22,10 +25,20 @@
     text-align: center;
   }
 
-  .search__bar-icon {
+  .search__button {
+    background: none;
+    border: none;
     position: absolute;
-    right: 51px;
-    color: #fff;
+  }
+
+  .search__bar-icon {
+    border-radius: 10px;
+    border: none;
+    padding: .5rem .1rem;
+    width: 3rem;
+    color: #000000;
+    margin: 0 .5rem;
+    opacity: .8;
   }
 }
 

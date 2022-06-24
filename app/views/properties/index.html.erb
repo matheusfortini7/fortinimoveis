@@ -1,7 +1,20 @@
-<div class="search__bar">
+<%# <div class="search__bar">
   <input type="text" placeholder="Encontre sua casa" class="search__bar-input">
   <i class="fas fa-search search__bar-icon"></i>
+</div> %>
+<div class="search__bar">
+  <%= form_tag properties_path, class: 'form', method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "search__bar-input",
+      placeholder: "Encontre sua próxima casa"
+    %>
+    <%#= button_tag(type: "submit", class: "search__button") do  %>
+      <%# <i class="fas fa-search search__bar-icon"></i> %>
+    <%# end %>
+  <% end %>
 </div>
+
 <section class="buttons">
   <div class="buttons__buy">
     <h2 class="buttons__buy-title">Comprar</h2>
