@@ -1,0 +1,102 @@
+.conteiner__property {
+  padding: 0 1rem;
+}
+
+.properties__card {
+
+  .properties__card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .properties__card-title {
+    font-weight: 600;
+    margin: 0 0 .8rem 0;
+    font-size: 1.3rem;
+  }
+}
+
+.values {
+  margin: 0 0 2rem 0;
+  padding: 1.1rem;
+  border: 0.4px solid #56adaa;
+  border-radius: 20px;
+
+  .values__description {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
+  }
+
+  .values__description-title {
+    font-weight: 600;
+  }
+
+  .values__description-price {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 ;
+  }
+
+  .values__table {
+    width: 100%;
+  }
+}
+
+.information {
+  .information__title {
+    font-weight: 700;
+    color: #A77464;
+  }
+
+  .information__description {
+    margin: 0;
+  }
+
+}
+
+.rooms {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map {
+  margin: 2rem 0;
+
+  .map__title {
+    margin: 0;
+  }
+}
+
+.visit {
+
+  .visit__title {
+    margin: 0;
+  }
+
+  .visit__image {
+    width: 100%;
+    height: 32vh;
+    margin: 0 auto;;
+  }
+
+  .visit__button {
+    background: #FF5964;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 17rem;
+    position: fixed;
+    bottom: 0;
+    left: 17%;
+  }
+}
