@@ -9,7 +9,7 @@
   </div>
   <div class="buttons__rent">
     <h2 class="buttons__rent-title">Alugar</h2>
-    <img class="buttons__rent-image" src="../../assets/images/alugar.svg" alt="Pessoa escolhendo entre duas casas">
+    <%= image_tag "rent.svg", class: "buttons__rent-image" %>
   </div>
 </section>
 <div class="intro">
@@ -18,14 +18,17 @@
 </div>
 
 <section class="properties">
-  <div class="properties__card" style="width: 100%; height: 300px">
-    <img class="properties__card-image" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento" style="width: 100%; height: 100%">
-    <p class="properties__card-title"><%= @properties.first.title %></p>
-    <span class="properties__card-price"><%= @properties.first.price %></span>
-    <div class="properties__icons">
-      <i class="fas fa-bed properties__icons-room"></i><%= @properties.first.rooms %>
-      <i class="fas fa-bath properties__icons-bathroom"></i><%= @properties.first.bathrooms %>
-      <i class="fas fa-car properties__icons-parking"></i><%= @properties.first.parking_space %>
+  <div class="properties__card">
+    <img class="properties__card-image" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
+    <span class="properties__price"><%= @properties.first.price %></span>
+    <div class="properties__information">
+      <p class="properties__information-title"><%= @properties.first.title %></p>
+      <ul class="properties__rooms">
+        <li><%= @properties.first.area.to_i %>m²</li>
+        <li><%= @properties.first.rooms %> quarto</li>
+        <li><%= @properties.first.bathrooms %> banheiro</li>
+        <li><%= @properties.first.parking_space %> vagas</li>
+      </ul>
     </div>
   </div>
 </section>

@@ -31,7 +31,8 @@
 
 .buttons {
   display: flex;
-  padding: 0 0 0 1.5rem;
+  padding: 0 1rem;
+  gap: 1rem;
 
   .buttons__buy {
     background-color: #0B5351;
@@ -43,16 +44,102 @@
     justify-content: center;
   }
 
-  .buttons__buy-image {
-    height: 10rem;
-    width: 80%;
-    margin: 0 auto;
-  }
-
   .buttons__buy-title {
     color: #fff;
     margin: 0;
     margin: 0 0 0 1rem;
   }
 
+  .buttons__buy-image {
+    height: 10rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .buttons__rent {
+    background-color: #EAC435;
+    border-radius: 20px;
+    height: 14rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .buttons__rent-title {
+    color: #fff;
+    margin: 0;
+    margin: 0 0 0 1rem;
+  }
+
+  .buttons__rent-image {
+    height: 10rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 1.2rem;
+  margin: 1rem 0;
+
+  .intro__title {
+    color: #A77464;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .intro__icon {
+    font-size: 1.2rem;
+    margin-right: .4rem;
+  }
+}
+
+.properties {
+  padding: 0 1rem;
+
+  .properties__card {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: 0 0 1rem 0;
+  }
+
+  .properties__card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .properties__information {
+    margin: .3rem 0;
+  }
+
+  .properties__information-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .properties__price {
+    bottom: 8px;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    right: 33px;
+    text-shadow: 0px 4px 42px rgba(0, 0, 0, 0.25);
+  }
+
+  .properties__rooms {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+  }
 }
