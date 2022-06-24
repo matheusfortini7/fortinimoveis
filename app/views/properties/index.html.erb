@@ -20,15 +20,47 @@
 <section class="properties">
   <div class="properties__card">
     <img class="properties__card-image" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
-    <span class="properties__price"><%= @properties.first.price %></span>
     <div class="properties__information">
       <p class="properties__information-title"><%= @properties.first.title %></p>
+    <span class="properties__information-price"><%= number_to_currency(@properties.first.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
+    <div class="properties__room-container">
       <ul class="properties__rooms">
         <li><%= @properties.first.area.to_i %>m²</li>
         <li><%= @properties.first.rooms %> quarto</li>
         <li><%= @properties.first.bathrooms %> banheiro</li>
         <li><%= @properties.first.parking_space %> vagas</li>
       </ul>
+    </div>
+    </div>
+  </div>
+  <div class="properties__card">
+    <img class="properties__card-image" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
+    <div class="properties__information">
+      <p class="properties__information-title"><%= @properties.first.title %></p>
+    <span class="properties__information-price"><%= number_to_currency(@properties.first.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
+    <div class="properties__room-container">
+      <ul class="properties__rooms">
+        <li><%= @properties.first.area.to_i %>m²</li>
+        <li><%= @properties.first.rooms %> quarto</li>
+        <li><%= @properties.first.bathrooms %> banheiro</li>
+        <li><%= @properties.first.parking_space %> vagas</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <div class="properties__card">
+    <img class="properties__card-image" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
+    <div class="properties__information">
+      <p class="properties__information-title"><%= @properties.first.title %></p>
+    <span class="properties__information-price"><%= number_to_currency(@properties.first.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
+    <div class="properties__room-container">
+      <ul class="properties__rooms">
+        <li><%= @properties.first.area.to_i %>m²</li>
+        <li><%= @properties.first.rooms %> quarto</li>
+        <li><%= @properties.first.bathrooms %> banheiro</li>
+        <li><%= @properties.first.parking_space %> vagas</li>
+      </ul>
+    </div>
     </div>
   </div>
 </section>
