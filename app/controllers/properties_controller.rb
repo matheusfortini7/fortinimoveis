@@ -2,7 +2,13 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
 
   def index
-    @properties = Property.all
+    # @properties = Property.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR address ILIKE :query"
+      @properties = Property.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @properties = Property.all
+    end
   end
 
   def show

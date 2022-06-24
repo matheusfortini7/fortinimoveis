@@ -11,11 +11,11 @@
     <table class="values__table">
       <tr>
         <td class="values__table-iptu-title">IPTU</td>
-        <td class="values__table-iptu-value"><%= @property.iptu %></td>
+        <td class="values__table-iptu-value"><%= number_to_currency(@property.iptu, unit: 'R$', separator: ',', delimiter: '.') %></td>
       </tr>
       <tr>
         <td class="values__table-condominium-title">Condomínio</td>
-        <td class="values__table-condominium-value"><%= @property.condominium %></td>
+        <td class="values__table-condominium-value"><%= number_to_currency(@property.condominium, unit: 'R$', separator: ',', delimiter: '.') %></td>
       </tr>
     </table>
   </div>
