@@ -6,6 +6,15 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon .navbar-brand {
   width: 40px;
+  margin: 1rem 0 0 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+
+  .navbar-toggler:focus {
+    border: 1px solid red;
+  }
 }
