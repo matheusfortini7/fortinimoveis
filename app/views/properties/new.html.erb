@@ -1,0 +1,18 @@
+<%= simple_form_for @property do |f| %>
+  <%= f.input :status, label: 'Venda ou aluguel?' %>
+  <%= f.input :title, label: 'Título' %>
+  <%= f.input :description, label: 'Descrição' %>
+  <%= f.input :area, label: 'Área' %>
+  <%= f.input :address, label: 'Endereço' %>
+  <%= f.input :bathrooms, label: 'Banheiros' %>
+  <%= f.input :rooms, label: 'Quartos' %>
+  <%= f.input :suites, label: 'Suítes' %>
+  <%= f.input :parking_space, label: 'Vagas' %>
+  <%= f.input :furnished, label: 'Mobiliado?' %>
+  <%= f.input :condominium, label: 'Valor do condomínio' %>
+  <%= f.input :iptu, label: 'IPTU/mês' %>
+  <%= f.input :price, label: 'Preço' %>
+  <%= f.input :building, label: 'Edifício' %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.button :submit %>
+  <% end %>
