@@ -46,7 +46,7 @@ class PropertiesController < ApplicationController
     params.require(:property).permit(
       :title, :description, :address, :bathrooms, :area, :rooms, :suites,
       :parking_space, :furnished, :condominium, :iptu, :price, :building,
-      :status
+      :status, photos: []
     )
   end
 
