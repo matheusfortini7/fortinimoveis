@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+  background-color: #99EDCC;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,12 +10,15 @@
 .navbar-lewagon .navbar-brand {
   width: 40px;
   margin: 1rem 0 0 1rem;
+  color: #FFFFFF;
 }
 
 .navbar-toggler {
   border: none;
+  color: #FFFFFF;
 
-  .navbar-toggler:focus {
-    border: 1px solid red;
+  .navbar__toggler-icon {
+    color: #FFFFFF;
+    font-size: 1.5rem;
   }
 }

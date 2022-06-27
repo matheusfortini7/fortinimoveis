@@ -3,24 +3,27 @@
 
 .search__bar {
   display: flex;
-  margin: 1rem 1rem;
   justify-content: center;
+  position: absolute;
+  bottom: 20px;
 
   .form {
     width: 100vw;
   }
 
   .search__bar-input {
-    background-color: #FF5964;
+    background-color: #FFFFFF;
     border: none;
     border-radius: 29px;
     padding: 1.1rem;
-    width: 100%;
+    width: 90%;
     position: relative;
+    display: block;
+    margin: 0 auto;
   }
 
   .search__bar-input::placeholder {
-    color: #fff;
+    color: #000000;
     font-weight: 400;
     text-align: center;
   }
@@ -42,53 +45,21 @@
   }
 }
 
-.buttons {
-  display: flex;
-  padding: 0 1rem;
-  gap: 1rem;
+.banner {
+  height: 50vh;
+  width: 100%;
+  background-color: #99EDCC;
+  position: relative;
 
-  .buttons__buy {
-    background-color: #0B5351;
-    border-radius: 20px;
-    height: 14rem;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .buttons__buy-title {
-    color: #fff;
+  .banner__title {
+    position: absolute;
+    padding: 0rem 1.2rem;
+    bottom: 50%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: start;
     margin: 0;
-    margin: 0 0 0 1rem;
-  }
-
-  .buttons__buy-image {
-    height: 10rem;
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .buttons__rent {
-    background-color: #EAC435;
-    border-radius: 20px;
-    height: 14rem;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .buttons__rent-title {
-    color: #fff;
-    margin: 0;
-    margin: 0 0 0 1rem;
-  }
-
-  .buttons__rent-image {
-    height: 10rem;
-    width: 80%;
-    margin: 0 auto;
+    color: #FFFFFF;
   }
 }
 
@@ -101,7 +72,7 @@
   margin: 1rem 0;
 
   .intro__title {
-    color: #A77464;
+    color: #000000;
     font-size: 32px;
     font-weight: 700;
   }

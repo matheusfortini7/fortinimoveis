@@ -1,21 +1,13 @@
-<div class="search__bar">
-  <%= form_tag properties_path, class: 'form', method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "search__bar-input",
-      placeholder: "Encontre sua próxima casa"
-    %>
-  <% end %>
-</div>
-
-<section class="buttons">
-  <div class="buttons__buy">
-    <h2 class="buttons__buy-title">Comprar</h2>
-    <%= image_tag "comprar.svg", class: "buttons__buy-image" %>
-  </div>
-  <div class="buttons__rent">
-    <h2 class="buttons__rent-title">Alugar</h2>
-    <%= image_tag "rent.svg", class: "buttons__rent-image" %>
+<section class="banner">
+  <h1 class="banner__title">Apartamentos no Tatuapé, Mooca e Vila Formosa. Conheça nossas opções.</h1>
+  <div class="search__bar">
+    <%= form_tag properties_path, class: 'form', method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search__bar-input",
+        placeholder: "Encontre sua próxima casa"
+      %>
+    <% end %>
   </div>
 </section>
 <div class="intro">
