@@ -1,0 +1,37 @@
+body {
+  background-color: #99EDCC;
+}
+
+.container__form {
+  padding: 0 2rem;
+
+  .title__create-property {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .label {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .input {
+    border-radius: 11px;
+    padding: 0.7rem 0.7rem;
+  }
+
+  .button__create-property {
+    display: block;
+    width: 18rem;
+    margin: 2rem auto;
+    background-color: #FF2E00;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    height: 6rem;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+}
