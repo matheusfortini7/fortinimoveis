@@ -1,0 +1,23 @@
+<div class="container__form">
+  <h1 class="title__create-property">Crie o seu anúncio</h1>
+
+  <%= simple_form_for @property do |f| %>
+    <%= f.input :status, label: 'Venda ou aluguel?', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :title, label: 'Título', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :description, label: 'Descrição', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :area, label: 'Área', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :address, label: 'Endereço', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :bathrooms, label: 'Banheiros', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :rooms, label: 'Quartos', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :suites, label: 'Suítes', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :parking_space, label: 'Vagas', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :furnished, label: 'Mobiliado?', input_html: { class: 'input-furnished' }, label_html: { class: 'label' } %>
+    <%= f.input :condominium, label: 'Valor do condomínio', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :iptu, label: 'IPTU/mês', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :price, label: 'Preço', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :building, label: 'Edifício', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true }, label_html: { class: 'label' } %>
+    <%= f.button :submit, class: 'button__create-property' %>
+    <% end %>
+
+</div>
