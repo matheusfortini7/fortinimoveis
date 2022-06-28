@@ -1,6 +1,6 @@
 <section class="conteiner__property">
   <div class="properties__card">
-    <%= cl_image_tag @property.photos.first, class: "properties__card-image" %>
+    <%= cl_image_tag @property.photos.first.key, class: "properties__card-image" %>
     <p class="properties__card-title"><%= @property.title %></p>
   </div>
   <div class="values">
