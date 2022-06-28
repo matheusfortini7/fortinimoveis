@@ -22,9 +22,9 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
-
   def create
     @property = Property.new(property_params)
+    @property.user_id = current_user.id
     if @property.save
       redirect_to @property
     else
