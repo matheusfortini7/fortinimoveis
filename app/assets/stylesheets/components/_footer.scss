@@ -1,9 +1,10 @@
 .footer {
-  // height: 100vh;
+  height: 50%;
+  bottom: 0;
   width: 100%;
   background-color: #E9FFF9;
-  margin: 8rem 0 0 0;
-  padding: 3rem 2rem 0 2rem;
+  margin: 0;
+  padding: 2rem 1rem;
 
   .footer__contact-title {
     font-weight: 700;
@@ -16,8 +17,7 @@
     font-size: 2rem;
   }
 
-  .footer__contact-image {
-    height: 19rem;
-    width: 100%;
+  .footer__contact-email:last-child {
+    margin: 0;
   }
 }
