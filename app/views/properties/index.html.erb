@@ -18,7 +18,9 @@
 <section class="properties">
   <% @properties.each do |property| %>
     <div class="properties__card">
-      <%= cl_image_tag property.photos.first.key, class: "properties__card-image" %>
+      <%= link_to property do %>
+        <%= cl_image_tag property.photos.first.key, class: "properties__card-image" %>
+      <% end %>
       <div class="properties__information">
         <p class="properties__information-title"><%= property.title %></p>
       <span class="properties__information-price"><%= number_to_currency(property.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
