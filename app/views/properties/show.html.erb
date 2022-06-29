@@ -1,5 +1,6 @@
-<section class="conteiner__property">
+<section class="container__property">
   <div class="properties__card">
+    <span class="properties__card-code">Cod - <%= @property.id %></span>
     <%= cl_image_tag @property.photos.first.key, class: "properties__card-image" %>
     <p class="properties__card-title"><%= @property.title %></p>
   </div>

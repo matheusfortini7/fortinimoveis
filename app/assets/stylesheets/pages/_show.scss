@@ -14,13 +14,20 @@
 }
 
 
-.conteiner__property {
+.container__property {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 0 1rem;
 }
 
 .properties__card {
   height: 50vh;
   margin: 1rem 0 3rem 0;
+
+  .properties__card-code {
+    font-weight: 700;
+  }
 
   .properties__card-image {
     width: 100%;
@@ -36,7 +43,7 @@
 }
 
 .values {
-  margin: 0 0 2rem 0;
+  margin: 0;
   padding: 1.1rem;
   border: 0.4px solid #56adaa;
   border-radius: 20px;
@@ -76,14 +83,14 @@
 
 .rooms {
   list-style: none;
-  margin: 1rem 0;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .map {
-  margin: 2rem 0;
+  margin: 0;
 
   .map__title {
     margin: 0;
