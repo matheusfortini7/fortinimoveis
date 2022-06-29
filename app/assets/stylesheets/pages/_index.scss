@@ -130,3 +130,31 @@
   }
 
 }
+
+.button__create-property-index {
+    background: #FF2E00;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 11rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .button__create-property-index-icon {
+      color: #FFFFFF;
+    }
+
+    .button__create-property-index-word {
+      font-weight: 500;
+    }
+}
