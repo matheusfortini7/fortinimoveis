@@ -34,3 +34,9 @@
   <% end %>
   </div>
 </section>
+
+<% if user_signed_in? %>
+  <%= link_to new_property_path do %>
+  <button class="button__create-property-index"><i class="fas fa-plus button__create-property-index-icon"></i><span class="button__create-property-index-word">Anunciar</span></button>
+  <% end %>
+<% end %>
