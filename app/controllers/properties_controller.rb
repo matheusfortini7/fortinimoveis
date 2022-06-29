@@ -14,6 +14,12 @@ class PropertiesController < ApplicationController
 
   def my_properties
     @properties = Property.where(user_id: current_user.id)
+
+    if params[:query].present?
+      @properties = @properties.where(id: params[:query])
+    else
+      @properties
+    end
   end
 
   def show
