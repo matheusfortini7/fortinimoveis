@@ -21,20 +21,20 @@
       <%= link_to property do %>
         <%= cl_image_tag property.photos.first.key, class: "properties__card-image" %>
       <% end %>
-      <div class="properties__information">
-        <p class="properties__information-title"><%= property.title %></p>
-      <span class="properties__information-price"><%= number_to_currency(property.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
-      <div class="properties__room-container">
-        <ul class="properties__rooms">
-          <li><%= property.area.to_i %>m²</li>
-          <li><%= property.rooms %> quarto</li>
-          <li><%= property.bathrooms %> banheiro</li>
-          <li><%= property.parking_space %> vagas</li>
-        </ul>
-      </div>
-      </div>
+        <div class="properties__information">
+          <p class="properties__information-title"><%= property.title %></p>
+          <span class="properties__information-price"><%= number_to_currency(property.price, unit: 'R$', separator: ',', delimiter: '.') %></span>
+        </div>
+        <div class="properties__room-container">
+          <ul class="properties__rooms">
+            <li><%= property.area.to_i %>m²</li>
+            <li><%= property.rooms %> quarto</li>
+            <li><%= property.bathrooms %> banheiro</li>
+            <li><%= property.parking_space %> vagas</li>
+          </ul>
+        </div>
+    </div>
   <% end %>
-  </div>
 </section>
 
 <% if user_signed_in? %>
