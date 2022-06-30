@@ -1,0 +1,37 @@
+.container__about-us {
+  padding: 0 1rem;
+
+  .profile {
+    margin: 0 0 1rem 0;
+  }
+
+  .image__about-us {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
+    width: 30vh;
+  }
+
+  .title__about-us {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+
+
+  .text__container {
+
+  }
+
+  .text__container-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .text__container-body {
+    text-align: justify;
+  }
+}

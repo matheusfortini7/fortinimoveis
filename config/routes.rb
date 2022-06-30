@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       get :my_properties
     end
   end
+  get 'about', to: 'pages#about'
 end
