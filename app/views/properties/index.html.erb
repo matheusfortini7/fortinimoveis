@@ -19,10 +19,26 @@
 </div>
 
 <section class="properties">
-  <% @properties.each do |property| %>
+  <% @properties.each_with_index do |property, index| %>
     <div class="properties__card">
       <%= link_to property do %>
-        <%= cl_image_tag property.photos.first.key, class: "properties__card-image" %>
+        <div id= <%= "carouselExampleControls#{index}" %>  class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <% property.photos.each_with_index do |photo, index| %>
+              <div class="carousel-item carousel-item-index <%= index == 0 ? 'active' : '' %>">
+                <%= cl_image_tag photo.key, height: 200, class: "w-100" %>
+              </div>
+            <% end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target=<%= "#carouselExampleControls#{index}" %> data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target=<%= "#carouselExampleControls#{index}" %> data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       <% end %>
         <div class="properties__information">
           <p class="properties__information-title"><%= property.title %></p>
