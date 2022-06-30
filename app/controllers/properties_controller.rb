@@ -16,7 +16,8 @@ class PropertiesController < ApplicationController
     @properties = Property.where(user_id: current_user.id)
 
     if params[:query].present?
-      @properties = @properties.where(id: params[:query])
+      sql_query = "address ILIKE :query OR building ILIKE :query"
+      @properties = @properties.where(sql_query, query: "%#{params[:query]}%")
     else
       @properties
     end
