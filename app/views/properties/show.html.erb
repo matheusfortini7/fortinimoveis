@@ -23,10 +23,15 @@
   </div>
 
     <p class="properties__card-title"><%= @property.title %></p>
+    <p class="properties__card-address"><%= @property.address %></p>
   </div>
   <div class="values">
     <div class="values__description">
-      <span class="values__description-title">Valor</span>
+      <% if @property.status == 'Venda' %>
+        <span class="values__description-title">Valor</span>
+      <% else %>
+        <span class="values__description-title">Aluguel</span>
+      <% end %>
       <h2 class="values__description-price"><%= number_to_currency(@property.price, unit: 'R$', separator: ',', delimiter: '.') %></h2>
     </div>
     <table class="values__table">
