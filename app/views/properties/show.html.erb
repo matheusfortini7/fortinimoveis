@@ -2,7 +2,7 @@
   <div class="properties__card">
     <span class="properties__card-code">Cod - <%= @property.id %></span>
     <div class="card-product-carousel">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
       <div class="carousel-inner">
         <% @property.photos.each_with_index do |photo, index| %>
           <div class="carousel-item carousel-item-show <%= index == 0 ? 'active' : '' %>">
@@ -55,7 +55,8 @@
   </div>
   <div class="visit">
     <h2 class="visit__title">Gostou do imóvel? Agende uma visita</h2>
-    <%= image_tag "agendar-visita.svg", class: "visit__image" %>
-    <button class="visit__button">Agende uma visita</button>
+    <%= link_to "https://wa.me/5511965854528?text=Olá!%20Eu%20tenho%20interesse%20no%20apartamento%20#{request.original_url}" do %>
+      <button class="visit__button">Agende uma visita</button>
+    <% end %>
   </div>
 </section>
