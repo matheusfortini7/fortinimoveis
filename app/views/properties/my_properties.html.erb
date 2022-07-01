@@ -3,7 +3,8 @@
       <%= text_field_tag :query,
         params[:query],
         class: "search__bar-my-input",
-        placeholder: "Procurar"
+        placeholder: "Procurar",
+        autocomplete: "off"
       %>
       <%= button_tag(type: "submit", class: "search__button") do  %>
       <i class="fas fa-search"></i>
