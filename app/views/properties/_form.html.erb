@@ -2,11 +2,11 @@
   <h1 class="title__create-property">Crie o seu anúncio</h1>
 
   <%= simple_form_for @property do |f| %>
-    <%= f.input :status, label: 'Venda ou aluguel?', input_html: { class: 'input' }, label_html: { class: 'label' } %>
-    <%= f.input :title, label: 'Título', input_html: { class: 'input' }, label_html: { class: 'label' } %>
-    <%= f.input :description, label: 'Descrição', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :status, label: 'Venda ou aluguel?', input_html: { class: 'input' }, label_html: { class: 'label' }, collection: %w[Venda Aluguel] %>
+    <%= f.input :title, label: 'Título', input_html: { class: 'input', autocomplete: 'off' }, label_html: { class: 'label' } %>
+    <%= f.input :description, :as => :text, :input_html => { 'rows' => 12, 'cols' => 10, class: 'input', autocomplete: 'off' }, label_html: { class: 'label' } %>
     <%= f.input :area, label: 'Área', input_html: { class: 'input' }, label_html: { class: 'label' } %>
-    <%= f.input :address, label: 'Endereço', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :address, label: 'Endereço', input_html: { class: 'input', autocomplete: 'off' }, label_html: { class: 'label' } %>
     <%= f.input :bathrooms, label: 'Banheiros', input_html: { class: 'input' }, label_html: { class: 'label' } %>
     <%= f.input :rooms, label: 'Quartos', input_html: { class: 'input' }, label_html: { class: 'label' } %>
     <%= f.input :suites, label: 'Suítes', input_html: { class: 'input' }, label_html: { class: 'label' } %>
@@ -15,9 +15,9 @@
     <%= f.input :condominium, label: 'Valor do condomínio', input_html: { class: 'input' }, label_html: { class: 'label' } %>
     <%= f.input :iptu, label: 'IPTU/mês', input_html: { class: 'input' }, label_html: { class: 'label' } %>
     <%= f.input :price, label: 'Preço', input_html: { class: 'input' }, label_html: { class: 'label' } %>
-    <%= f.input :building, label: 'Edifício', input_html: { class: 'input' }, label_html: { class: 'label' } %>
+    <%= f.input :building, label: 'Edifício', input_html: { class: 'input', autocomplete: 'off' }, label_html: { class: 'label' } %>
     <%= f.input :photos, as: :file, input_html: { multiple: true }, label_html: { class: 'label' } %>
-    <%= f.button :submit, class: 'button__create-property' %>
+    <%= f.submit 'Criar anúncio', class: 'button__create-property', data: { disable_with: 'Aguarde...' } %>
     <% end %>
 
 </div>
