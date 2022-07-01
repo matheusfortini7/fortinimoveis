@@ -15,11 +15,15 @@
     background-color: #FFFFFF;
     border: none;
     border-radius: 29px;
-    padding: 1.1rem;
+    padding: 1.1rem 5rem;
     width: 90%;
     position: relative;
     display: block;
     margin: 0 auto;
+  }
+
+  .search__bar-input:focus {
+    outline: none;
   }
 
   .search__bar-input::placeholder {
@@ -28,10 +32,17 @@
     text-align: center;
   }
 
+  .search__bar-input:focus::placeholder {
+    color: transparent;
+  }
+
   .search__button {
     background: none;
     border: none;
     position: absolute;
+    top: 12px;
+    left: 28px;
+    font-size: 1.3rem;
   }
 
   .search__bar-icon {
@@ -48,18 +59,29 @@
 .banner {
   height: 50vh;
   width: 100%;
-  background-color: #99EDCC;
+  background-color: #000000;
   position: relative;
+  margin: 0 0 1rem 0;
 
   .banner__title {
     position: absolute;
-    padding: 0rem 1.2rem;
+    padding: 0rem 1rem;
     bottom: 50%;
     font-size: 1.8rem;
     font-weight: 700;
     text-align: start;
     margin: 0;
     color: #FFFFFF;
+    z-index: 1;
+    text-align: justify;
+  }
+
+  .banner__image {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    opacity: .6;
   }
 }
 
@@ -85,11 +107,18 @@
 
 .properties {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 
   .properties__card {
     width: 100%;
     height: 300px;
-    margin: 0 0 10rem 0;
+    margin: 0 0 5rem 0;
+  }
+
+  .container__image {
+    height: 20rem;
   }
 
   .properties__card-image {
