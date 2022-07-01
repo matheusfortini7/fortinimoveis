@@ -22,7 +22,9 @@
               <button class="button__edit"><i class="far fa-edit card__container-icon-edit"></i>Editar</button>
             <% end %>
           </div>
-          <button class="card__container-buttons-delete"><i class="far fa-trash-alt card__container-icon-delete"></i>Excluir</button>
+          <%= link_to property_path(property), method: :delete, data: { confirm: 'Deseja excluir o anúncio?' } do %>
+            <button class="card__container-buttons-delete"><i class="far fa-trash-alt card__container-icon-delete"></i>Excluir</button>
+          <% end %>
         </div>
       </div>
     </div>
