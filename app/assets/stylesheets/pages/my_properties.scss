@@ -45,7 +45,7 @@
     gap: .2rem;
   }
 
-  .card__container-buttons-edit {
+  .button__edit-link {
     background: none;
     border: 2px solid #99EDCC;
     height: 50%;
@@ -54,6 +54,14 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+  }
+
+  .button__edit {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
   }
 
   .card__container-icon-edit {

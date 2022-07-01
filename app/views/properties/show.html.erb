@@ -3,10 +3,10 @@
     <span class="properties__card-code">Cod - <%= @property.id %></span>
     <div class="card-product-carousel">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-      <div class="carousel-inner">
+      <div class="carousel-inner properties__card-image">
         <% @property.photos.each_with_index do |photo, index| %>
-          <div class="carousel-item carousel-item-show <%= index == 0 ? 'active' : '' %>">
-            <%= cl_image_tag photo.key, height: 300, width: 500, crop: :fill %>
+          <div class="property__image-container carousel-item carousel-item-show <%= index == 0 ? 'active' : '' %>">
+            <%= cl_image_tag photo.key, class: 'properties__card-image', crop: :fill %>
           </div>
         <% end %>
       </div>
@@ -55,11 +55,7 @@
     <li class="rooms__bathrooms"><%= @property.bathrooms %> banheiros</li>
     <li class="rooms__parking-space"><%= @property.parking_space %> vagas</li>
   </ul>
-  <div class="map">
-    <h2 class="map__title">Localização</h2>
-  </div>
   <div class="visit">
-    <h2 class="visit__title">Gostou do imóvel? Agende uma visita</h2>
     <%= link_to "https://wa.me/5511965854528?text=Olá!%20Eu%20tenho%20interesse%20no%20apartamento%20#{request.original_url}" do %>
       <button class="visit__button">Agende uma visita</button>
     <% end %>

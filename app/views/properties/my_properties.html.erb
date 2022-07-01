@@ -17,9 +17,11 @@
       <div class="card__container">
         <img class="card__container-img" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
         <div class="card__container-buttons">
-          <%= link_to edit_property_path(property.id), class: "card__container-buttons-edit" do %>
-            <button class="card__container-buttons-edit"><i class="far fa-edit card__container-icon-edit"></i>Editar</button>
-          <% end %>
+          <div class="button__edit-link">
+            <%= link_to edit_property_path(property.id) do %>
+              <button class="button__edit"><i class="far fa-edit card__container-icon-edit"></i>Editar</button>
+            <% end %>
+          </div>
           <button class="card__container-buttons-delete"><i class="far fa-trash-alt card__container-icon-delete"></i>Excluir</button>
         </div>
       </div>
