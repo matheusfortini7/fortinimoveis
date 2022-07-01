@@ -50,7 +50,7 @@ class PropertiesController < ApplicationController
 
   def destroy
     @property.destroy
-    redirect_to properties_path
+    redirect_to my_properties_properties_path
   end
 
   private
