@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
 
   def index
-    @properties = Property.all
+    @pagy, @properties = pagy(Property.order(created_at: :desc))
 
     if params[:query].present?
       sql_query = "address ILIKE :query"
