@@ -14,7 +14,7 @@
       <span class="card__code">Cod <%= property.id %></span>
       <div class="card__container">
       <%= link_to property, class: 'card__container-img-link' do %>
-          <%= cl_image_tag property.photos.first, class:'card__container-img' %>
+          <%= cl_image_tag property.photos.first.key, class:'card__container-img' %>
       <% end %>
         <div class="card__container-buttons">
           <div class="button__edit-link">
