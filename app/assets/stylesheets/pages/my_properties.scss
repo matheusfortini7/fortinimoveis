@@ -12,6 +12,9 @@
 
 .container__cards {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   .card {
     background: none;
@@ -31,8 +34,14 @@
     gap: .2rem;
   }
 
+  .card__container-img-link {
+    width: 80%;
+    border-radius: 20px;
+    height: 10rem;
+  }
+
   .card__container-img {
-    width: 70%;
+    width: 100%;
     border-radius: 20px;
     height: 10rem;
   }
@@ -40,7 +49,7 @@
   .card__container-buttons {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 20%;
     height: 100%;
     gap: .2rem;
   }
@@ -48,6 +57,17 @@
   .button__edit-link {
     background: none;
     border: 2px solid #99EDCC;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .button__delete-link {
+    background: #FF2E00;
+    border: none;
     height: 50%;
     border-radius: 20px;
     display: flex;
@@ -64,8 +84,21 @@
     border: none;
   }
 
+  .button__edit-link-title {
+    text-decoration: none;
+  }
+
+  .button__delete-link-title {
+    text-decoration: none;
+  }
+
   .card__container-icon-edit {
-    font-size: 2rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+
+  .button__edit-link-text {
+    font-size: .8rem;
   }
 
   .card__container-buttons-delete {
@@ -77,10 +110,15 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    border: none;
+  }
+
+  .button__delete-link-text {
+    font-size: .8rem;
   }
 
   .card__container-icon-delete {
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 }

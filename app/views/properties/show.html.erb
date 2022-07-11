@@ -22,8 +22,16 @@
     </div>
   </div>
 
+  </div>
+  <div class="card__text">
     <p class="properties__card-title"><%= @property.title %></p>
-    <p class="properties__card-address mb-3"><%= @property.address %></p>
+    <p class="properties__card-address"><%= @property.address %></p>
+  <ul class="rooms">
+    <li class="rooms__area"><%= @property.area.to_i %>m²</li>
+    <li class="rooms__rooms"><%= @property.rooms %> quartos</li>
+    <li class="rooms__bathrooms"><%= @property.bathrooms %> banheiros</li>
+    <li class="rooms__parking-space"><%= @property.parking_space %> vagas</li>
+  </ul>
   </div>
   <div class="values">
     <div class="values__description">
@@ -49,14 +57,8 @@
     <h2 class="information__title">Conheça mais</h2>
     <p class="information__description"><%= @property.description %> </p>
   </div>
-  <ul class="rooms">
-    <li class="rooms__area"><%= @property.area.to_i %>m²</li>
-    <li class="rooms__rooms"><%= @property.rooms %> quartos</li>
-    <li class="rooms__bathrooms"><%= @property.bathrooms %> banheiros</li>
-    <li class="rooms__parking-space"><%= @property.parking_space %> vagas</li>
-  </ul>
   <div class="visit">
-    <%= link_to "https://wa.me/5511965854528?text=Olá!%20Eu%20tenho%20interesse%20no%20apartamento%20#{request.original_url}" do %>
+    <%= link_to "https://wa.me/5511965854528?text=Olá!%20Eu%20tenho%20interesse%20no%20anúncio%20#{request.original_url}" do %>
       <button class="visit__button">Agende uma visita</button>
     <% end %>
   </div>
