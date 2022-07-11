@@ -3,12 +3,9 @@
       <%= text_field_tag :query,
         params[:query],
         class: "search__bar-my-input",
-        placeholder: "Procurar",
+        placeholder: "Procurar pelo código",
         autocomplete: "off"
       %>
-      <%= button_tag(type: "submit", class: "search__button") do  %>
-      <i class="fas fa-search"></i>
-    <% end %>
     <% end %>
 </div>
   <section class="container__cards">
@@ -16,18 +13,24 @@
     <div class="card">
       <span class="card__code">Cod <%= property.id %></span>
       <div class="card__container">
-        <img class="card__container-img" src="https://images.unsplash.com/photo-1622866306511-031a51990642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBhcnRhbWVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="Apartamento">
+      <%= link_to property, class: 'card__container-img-link' do %>
+          <%= cl_image_tag property.photos.first, class:'card__container-img' %>
+      <% end %>
         <div class="card__container-buttons">
           <div class="button__edit-link">
-            <%= link_to edit_property_path(property.id) do %>
-              <button class="button__edit"><i class="far fa-edit card__container-icon-edit"></i>Editar</button>
+            <%= link_to edit_property_path(property.id), class: 'button__edit-link-title' do %>
+              <button class="button__edit"><i class="far fa-edit card__container-icon-edit"></i><span class="button__edit-link-text">Editar</span></button>
             <% end %>
           </div>
-          <%= link_to property_path(property), method: :delete, data: { confirm: 'Deseja excluir o anúncio?' } do %>
-            <button class="card__container-buttons-delete"><i class="far fa-trash-alt card__container-icon-delete"></i>Excluir</button>
-          <% end %>
+          <div class="button__delete-link">
+            <%= link_to property_path(property), method: :delete, data: { confirm: 'Deseja excluir o anúncio?' }, class: 'button__delete-link-title' do %>
+              <button class="card__container-buttons-delete"><i class="far fa-trash-alt card__container-icon-delete"></i><span class="button__delete-link-text">Excluir</span></button>
+            <% end %>
+          </div>
         </div>
       </div>
+      <span><%= property.title %></span>
+      <span><%= property.address %></span>
     </div>
     <% end %>
 </section>

@@ -17,13 +17,12 @@
 .container__property {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem;
 }
 
 .properties__card {
   height: 50vh;
-  margin: 1rem 0 3rem 0;
 
   .properties__card-code {
     font-weight: 700;
@@ -39,15 +38,25 @@
     border-radius: 20px;
   }
 
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
   .properties__card-title {
     font-weight: 600;
-    margin: 0 0 .8rem 0;
+    margin: 0;
     font-size: 1.3rem;
+  }
+
+  .properties__card-address {
+      margin: 0;
   }
 }
 
 .values {
-  margin: 3rem 0 0 0;
   padding: 1.1rem;
   border: 0.4px solid #99EDCC;
   border-radius: 20px;
