@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid m-2">
     <%= link_to properties_path, class: "navbar-brand" do %>
-      <span class="logo">Fortini Imóveis</span>
+      <%= image_tag('logo.svg') %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,7 @@
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Sobre nós", about_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
