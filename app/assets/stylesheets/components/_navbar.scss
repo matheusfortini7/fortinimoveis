@@ -7,10 +7,16 @@
   flex-grow: 0;
 }
 
-.logo {
-  width: 2.4rem;
-  margin-left: 0.4rem;
+.navbar-brand:focus {
+  outline: 1px solid #119DA4;
 }
+
+.logo {
+  font-size: 1.7rem;
+  color: #119DA4;
+  font-family: 'Oleo Script', cursive;
+}
+
 
 .navbar-toggler {
   border: none;
