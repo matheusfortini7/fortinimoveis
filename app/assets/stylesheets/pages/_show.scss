@@ -137,5 +137,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+    opacity: .9;
+  }
+
+  .visit__button:focus {
+    opacity: 1;
   }
 }

@@ -10,7 +10,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "search__bar-input",
-        placeholder: "Procurar pelo endereço",
+        placeholder: "Procurar pela rua",
         autocomplete: "off"
       %>
       <%= button_tag(type: "submit", class: "search__button") do  %>
@@ -54,8 +54,8 @@
         <div class="properties__room-container">
           <ul class="properties__rooms">
             <li><%= property.area.to_i %>m²</li>
-            <li><%= property.rooms %> quarto</li>
-            <li><%= property.bathrooms %> banheiro</li>
+            <li><%= property.rooms %> quartos</li>
+            <li><%= property.bathrooms %> banheiros</li>
             <li><%= property.parking_space %> vagas</li>
           </ul>
         </div>
