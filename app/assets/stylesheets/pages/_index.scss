@@ -179,6 +179,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    opacity: .9;
 
     .button__create-property-index-icon {
       color: #FFFFFF;
@@ -187,4 +188,9 @@
     .button__create-property-index-word {
       font-weight: 500;
     }
+
+  }
+
+.button__create-property-index:focus {
+  opacity: 1;
 }

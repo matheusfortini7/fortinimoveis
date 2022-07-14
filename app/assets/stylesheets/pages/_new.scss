@@ -34,5 +34,10 @@ body {
     font-weight: 700;
     color: #FFFFFF;
     border: none;
+    opacity: .9;
+  }
+
+  .button__create-property:focus {
+    opacity: 1;
   }
 }
